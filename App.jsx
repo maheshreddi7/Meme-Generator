@@ -1,15 +1,12 @@
-import React from "react"
+import Header from "./components/Header"
+import Main from "./components/Main"
 
-export default function App(props) {
-    const [starWarsData, setStarWarsData] = React.useState(null)
-    
-    fetch("https://swapi.dev/api/people/1")
-        .then(res => res.json())
-        .then(data => setStarWarsData(data))
+export default function App() {
     
     return (
-        <div>
-            <pre>{JSON.stringify(starWarsData, null, 2)}</pre>
-        </div>
+        <>
+            <Header />
+            <Main />
+        </>
     )
-}  
+}
